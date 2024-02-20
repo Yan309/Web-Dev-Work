@@ -1,0 +1,240 @@
+  body {
+    background: #525659;
+  }
+
+  page {
+    background: white;
+    display:block;
+    margin: 0 auto;
+    margin-bottom: 0.5cm;
+    box-shadow: 0 0 1cm rgba(0,0,0,0.5);
+  }
+  #A4 {  
+    width: 21cm;
+    height: 29.7cm; 
+    padding-top: 30px;
+  }
+
+  h1 {
+    color: rgb(255, 255, 255);
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+  }
+  h1, h2, h3, h4, h5, h6
+  {
+    font-weight: normal;
+    margin-block-start: 0.22em;
+  }
+
+
+  #introduction {
+    margin-left: 30px;
+    margin-bottom: 10px;
+    padding:1px;
+    background-color: #2b343d;
+    padding-bottom: 10px;
+  }
+  
+  .text{
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+    font-size: 14px;
+    color: #2b343d;
+    margin: 0px;
+    margin-bottom: 10px !important;
+    text-decoration: none;
+  }
+
+  .contrast{
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+    color: white;
+  }
+
+  .space{
+    margin-left: 20px;
+  }
+
+  .margin{
+    margin: 30px;
+    margin-top: 28px !important;
+  }
+  
+  #Ldiv{
+    width: 23%;
+  }
+
+  .icons{
+    height: 19px;
+    width: 19px;
+  }
+
+  .bottom_space{
+    margin-bottom: 18px;
+  }
+
+  .bottom_space2x{
+    margin-bottom: 37px;
+  }
+
+  .headings{
+    font-size: 19px;
+    border-bottom: 2px solid #2b343d;
+    color: #2b343d;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    margin-bottom: 11px;
+  }
+
+  .italic{
+    font-size: 10px ;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: italic;
+    margin-bottom: 11px;
+  }
+  
+  table, th, td {
+    border-right: 7px solid white;
+    border-bottom: 11px solid white;
+    border-collapse: collapse;
+    margin: 0%;
+    padding: 0%;
+    }
+    th, td {
+    background-color: #95999e;
+    color: white;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    font-size: 12px;
+    text-align: center;
+    }
+
+    .round{
+      border-radius: 5px;
+      border: 2px solid #95999e;
+      background-color: #95999e;
+      text-align: center;
+      padding-left: 1px;
+      padding-right: 1px;
+      padding-top: 1px;
+      padding-bottom: 2px;
+      font-size: 13px;
+    }
+    
+    .language{
+      margin-bottom: 0px !important;
+    }
+
+    .interests{
+      border: 2px solid #d2d2d2;
+      text-align: center;
+      width: 130px;
+      padding: 2px;
+      border-radius: 4px;
+    }
+
+    .skillset{
+      display: flex;
+    }
+
+
+    #cell1{
+      width: 12%;
+      margin-right: 6px;
+    }
+    #cell2{
+      width: 18%;
+      margin-right: 6px;
+    }
+    #cell3{
+      width: 30%;
+      margin-right: 6px;
+    }
+    #cell4{
+      width: 50%;
+      margin-right: 6px;
+    }
+    #cell5{
+      width: 22%;
+      margin-right: 6px;
+    }
+    #cell6{
+      width: 40%;
+      margin-right: 6px;
+    }
+    #cell7{
+      width: 23%;
+      margin-right: 6px;
+    }
+
+    #Rdiv{
+      width: 73%;
+      padding-left: 15px;
+    }
+
+    .headingsR{
+      font-size: 19px;
+      border-bottom: 2px solid #2b343d;
+      color: #2b343d;
+      font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-weight: bold;
+      margin-bottom: 5px;
+      margin-top: 0%;
+      padding-left: 20px;
+    }
+
+    #education{
+      font-size: 17px !important;
+      font-weight: bold;
+      font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      margin-bottom: -3px !important;
+    }
+
+    #university{
+      font-size: 17px !important;
+      font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      margin-bottom: 3px !important;
+    }
+
+    #date{
+      margin-bottom: 5px !important;
+    }
+
+    ul {
+      list-style: none;
+      margin-left: 0;
+      padding-left: 0;
+      margin-top: 0.3%;
+      margin-bottom: 0px;
+    }
+
+    li:before {
+      content: "◘";
+      padding-right: 5px;
+      font-weight: none;
+    }
+
+    .list{
+      margin-bottom: 5px !important;
+    }
+
+    .orgs{
+      font-size: 15px !important;
+      margin-bottom: 1px !important;
+    }
+
+    #org{
+      margin-bottom: 10px !important;
+    }
+
+    .ralign{
+      padding-left: 20px !important;
+    }
+
+    #gpa{
+      float: right;
+    }
+
+    .proj{
+      font-size: 12px !important;
+    }
