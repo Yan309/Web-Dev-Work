@@ -209,10 +209,10 @@
     }
 
     li:before {
-      content: "◘";
+      content: "o";
       padding-right: 5px;
       font-weight: none;
-      font-size: 11px;
+      font-size: 13px;
     }
 
     .list{
