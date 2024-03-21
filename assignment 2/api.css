@@ -187,3 +187,19 @@
     font-family: Arial, Helvetica, sans-serif;
     border: none;
 }
+.editbutton:hover{
+    background-color:#762ddd;
+    border: none;
+}
+.deletebutton:hover{
+    background-color:#000000;
+    border: none;
+}
+.editbutton:active{
+    background-color:#762ddd !important;
+    border: none !important;
+}
+.deletebutton:active{
+    background-color:#000000 !important;
+    border: none !important;
+}
