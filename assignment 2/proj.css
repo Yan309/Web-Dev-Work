@@ -358,6 +358,7 @@ button:hover::after, button:focus::after {
 .form-control:focus {
   outline: none !important;
   box-shadow: none !important;
+
 }
 
 .form-control{
