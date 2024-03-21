@@ -2,11 +2,14 @@
 <html lang="en">
   <head>
     <link rel="stylesheet" href="./proj.css">
-    </head>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  </head>
     <body>
-    <div id="navbar" class="fixed-top">
+    <div id="navbar">
       <div id="logo">
-        <a href=""><img src="/images/testing.png"><span><span id="le">Le</span>Rix</span></a>   
+        <a href=""><img class="height"src="/images/testing.png"><span><span id="le">Le</span>Rix</span></a>   
       </div>
       <div id="social_pages">
         <div id="socials" class="social-links">
@@ -36,10 +39,10 @@
       </div>
     </div>
     <div class="card">
-      <img src="/images/Heat Waves.jpg" alt="Album Cover">
+      <img src="/images/Blinding Lights.jpg" alt="Album Cover">
       <div class="card-info">
-          <h3>Heat Waves</h3>
-          <p>Glass Animals</p>
+          <h3>Blinding Lights</h3>
+          <p>Abel Tesfaye</p>
       </div>
   </div>
   <div class="card">
@@ -57,10 +60,10 @@
   </div>
 </div>
 <div class="card">
-  <img src="/images/Blinding Lights.jpg" alt="Album Cover">
+  <img src="/images/Heat Waves.jpg" alt="Album Cover">
   <div class="card-info">
-      <h3>Blinding Lights</h3>
-      <p>Abel Tesfaye</p>
+      <h3>Heat Waves</h3>
+      <p>Glass Animals</p>
   </div>
 </div>  
   <div class="card">
@@ -92,13 +95,13 @@
   </div>
 </div>
 <div class="card">
-  <img src="/images/idol.jpg" alt="Album Cover">
+  <img src="/images/Happier Than Ever.jpg" alt="Album Cover">
   <div class="card-info">
-      <h3>Idol</h3>
-      <p>Yoasobi</p>
+      <h3>Happier than Ever</h3>
+      <p>Billie Eilish</p>
   </div>
 </div><div class="card">
-  <img src="/images/Strangers.jpg" alt="Album Cover">
+  <img src="/images/stranger.png" alt="Album Cover">
   <div class="card-info">
       <h3>Strangers</h3>
       <p>Kenya Grace</p>
@@ -140,6 +143,35 @@
   </div>
 </div>
   </div>
+  <form name="contactform" class="centerform">
+    <div id="contactbox"> 
+      <div id="contact-us" class="form-group">Contact Us</div>
+    <div class="form-group">
+      <label for="exampleFormControlInput1" class="lbl">Email</label>
+      <input type="email" class="form-control" class="inputs" name="email" placeholder="name@example.com">
     </div>
+    <div class="form-group">
+      <label for="exampleFormControlTextarea1" class="lbl">Feedback</label>
+      <textarea class="form-control" id="inputs" rows="5" placeholder="Provide your feedback here."></textarea>
+    </div>
+    <div class="wrap">
+      <button class="button" onclick="return validateform()">Submit</button>
+    </div>
+  </div>
+  </form>
+    </div>
+    <footer>
+      <div class="footer-container">
+          <div class="footer-content">
+              <img src="./images/testing.png" alt="Mass Records Logo" class="footer-logo">
+              <p class="footer-text">Navigate the world of music with ease on Le Rix, where lyrics flow as quickly as the melodies. Tune in, sing along, and vibe without a pause !
+              </p>
+          </div>
+          <div class="footer-credits">
+              <p>&copy; 2024 Le Rix. All rights reserved.</p>
+          </div>
+      </div>
+  </footer>
+  
   </body>
 </html>
