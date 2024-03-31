@@ -158,7 +158,7 @@
   }
   
   .card {
-    width: 250px;
+    width: 100%;
     margin: 20px; 
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); 
     text-align: center;
@@ -381,4 +381,16 @@ button:hover::after, button:focus::after {
   box-shadow: none !important;
   border: 1px solid #762ddd;
   border-color: #762ddd !important;
+}
+
+@media screen and (min-width: 641px) {
+  .card {
+      width: 25%; 
+  }
+}
+
+@media screen and (min-width: 1008px) {
+    .card {
+        width: 17%; 
+    }
 }
