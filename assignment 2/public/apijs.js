@@ -10,7 +10,7 @@ function displayStories() {
   
         $.each(data, function (index, story) {
           storiesList.append(
-            `<div class="mb-3">
+            `<div class="mb-3s">
                   <h3 class="storytitle">${story.title}</h3>
                   <div class="story">${story.content}</div>
                   <div>
