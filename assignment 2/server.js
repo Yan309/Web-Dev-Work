@@ -2,7 +2,6 @@ const express = require("express");
 let server = express();
 server.set("view engine","ejs");
 server.use(express.static("public"));
-server.use(express.static("images"));
 server.get("/api", function(req,res){    
     res.render("api");
 })
