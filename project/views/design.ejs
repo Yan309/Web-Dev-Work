@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="./proj.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  </head>
+    <body>
+    <div id="navbar">
+      <div id="logo">
+        <a href="/"><img class="height"src="/images/testing.png"><span><span id="le">Le</span>Rix</span></a>   
+      </div>
+      <div id="social_pages">
+        <div id="socials" class="social-links">
+          <a href="https://github.com/Yan309"><img src="/images/git.png"></a>
+          <a href="https://www.linkedin.com/in/muhammad-aliyan-ul-haq-75130b27b/"><img src="/images/linked.png"></a>
+          <a href="https://twitter.com/DemonSkg"><img src="/images/X.png"></a>
+          <a href="https://www.instagram.com/aliyan_uhh"><img src="/images/insta.png"></a>
+        </div>
+        <div id="pages" class="nav-links">
+          <a href="/Releases">Releases</a>
+          <a href="/Artists">Artists</a>
+          <a href="#contform">Contact</a>
+          <a href="/api">Fake API</a>
+        </div>
+    </div>
+      </div>
+      <div id="page-parent">
+      <div id="PageBody">
+        releases
+      </div>
+      <div class="card-container">
+      <div class="card">
+        <img src="/images/love story.jpg" alt="Album Cover">
+        <div class="card-info">
+          <h3>Love Story</h3>
+          <p>Taylor Swift</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="/images/Blinding Lights.jpg" alt="Album Cover">
+      <div class="card-info">
+          <h3>Blinding Lights</h3>
+          <p>Abel Tesfaye</p>
+      </div>
+  </div>
+  <div class="card">
+    <img src="/images/The Boy Is Mine.jpg" alt="Album Cover">
+    <div class="card-info">
+        <h3>The Boy is Mine</h3>
+        <p>Ariana Grande</p>
+    </div>
+</div>
+<div class="card">
+  <img src="/images/Believer.jpg" alt="Album Cover">
+  <div class="card-info">
+      <h3>Believer</h3>
+      <p>Imagine Dragons</p>
+  </div>
+</div>
+<div class="card">
+  <img src="/images/Heat Waves.jpg" alt="Album Cover">
+  <div class="card-info">
+      <h3>Heat Waves</h3>
+      <p>Glass Animals</p>
+  </div>
+</div>  
+  <div class="card">
+    <img src="/images/mocking bird.jpg" alt="Album Cover">
+    <div class="card-info">
+        <h3>Mocking Bird</h3>
+        <p>Eminem</p>
+    </div>
+</div>
+<div class="card">
+  <img src="/images/i aint worried.jpg" alt="Album Cover">
+  <div class="card-info">
+      <h3>I Ain't Worried</h3>
+      <p>One Republic</p>
+  </div>
+</div>
+<div class="card">
+  <img src="/images/Perfect.jpg" alt="Album Cover">
+  <div class="card-info">
+      <h3>Perfect</h3>
+      <p>Ed Sheeran</p>
+  </div>
+</div>
+<div class="card">
+  <img src="/images/I wanna be yours.jpg" alt="Album Cover">
+  <div class="card-info">
+      <h3>I Wanna be Yours</h3>
+      <p>Arctic Monkeys</p>
+  </div>
+</div>
+<div class="card">
+  <img src="/images/Happier Than Ever.jpg" alt="Album Cover">
+  <div class="card-info">
+      <h3>Happier than Ever</h3>
+      <p>Billie Eilish</p>
+  </div>
+</div><div class="card">
+  <img src="/images/stranger.png" alt="Album Cover">
+  <div class="card-info">
+      <h3>Strangers</h3>
+      <p>Kenya Grace</p>
+  </div>
+</div>
+<div class="card">
+  <img src="/images/stay.jpg" alt="Album Cover">
+  <div class="card-info">
+      <h3>Stay</h3>
+      <p>The Kid LAROI, Justin Bieber</p>
+  </div>
+</div>
+<div class="card">
+  <img src="/images/good 4 you.jpg" alt="Album Cover">
+  <div class="card-info">
+      <h3>Good 4 U</h3>
+      <p>Olivia Rodrigo</p>
+  </div>
+</div>
+<div class="card">
+  <img src="/images/glimpse of us.jpg" alt="Album Cover">
+  <div class="card-info">
+      <h3>Glimpse of Us</h3>
+      <p>Joji</p>
+  </div>
+</div>
+<div class="card">
+  <img src="/images/sticky.jpg" alt="Album Cover">
+  <div class="card-info">
+      <h3>Sticky</h3>
+      <p>Drake</p>
+  </div>
+</div>
+<div class="card">
+  <img src="/images/unstopable.jpg" alt="Album Cover">
+  <div class="card-info">
+      <h3>Unstoppable</h3>
+      <p>Sia</p>
+  </div>
+</div>
+  </div>
+  <div id="contform" class="contact-top">
+
+  </div>
+  <section >
+    <form  onsubmit="validateForm()" name="contactform" class="centerform">
+      <div id="contactbox"> 
+        <div id="contact-us" class="form-group">Contact Us</div>
+      <div class="form-group">
+        <label for="exampleFormControlInput1" class="lbl">Email</label>
+        <input required="true" type="email" class="form-control inputs purple-border" name="email" id="email" placeholder="name@example.com">
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlTextarea1" class="lbl">Feedback</label>
+        <textarea required="true" class="form-control purple-border" id="inputs" rows="5" name="feedback" placeholder="Provide your feedback here."></textarea>
+      </div>
+      <div class="wrap">
+        <button onclick="validateForm()" type="submit" class="button">Submit</button>
+      </div>
+    </div>
+    </form>
+  </section>
+    <footer>
+      <div class="footer-container">
+          <div class="footer-content">
+              <img src="./images/testing.png" alt="Mass Records Logo" class="footer-logo">
+              <p class="footer-text">Navigate the world of music with ease on Le Rix, where lyrics flow as quickly as the melodies. Tune in, sing along, and vibe without a pause !
+              </p>
+          </div>
+          <div class="footer-credits">
+              <p>&copy; 2024 Le Rix. All rights reserved.</p>
+          </div>
+      </div>
+  </footer>
+</div>
+  </body>
+</html>

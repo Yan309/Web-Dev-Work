@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Story CRUD Operations</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="./apijs.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+    <link rel="stylesheet" href="./api.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div id="navbar">
+        <div id="logo">
+          <a href="/"><img class="height"src="/images/testing.png"><span><span id="le">Le</span>Rix</span></a>   
+        </div>
+        <div id="social_pages">
+          <div id="socials" class="social-links">
+            <a href="https://github.com/Yan309"><img src="/images/git.png"></a>
+            <a href="https://www.linkedin.com/in/muhammad-aliyan-ul-haq-75130b27b/"><img src="/images/linked.png"></a>
+            <a href="https://twitter.com/DemonSkg"><img src="/images/X.png"></a>
+            <a href="https://www.instagram.com/aliyan_uhh"><img src="/images/insta.png"></a>
+          </div>
+          <div id="pages" class="nav-links">
+            <a href="/Releases">Releases</a>
+            <a href="/Artists">Artists</a>
+            <a href="#contform">Contact</a>
+            <a href="api.html">Fake API</a>
+          </div>
+      </div>
+        </div>
+<div class="container mt-5">
+    <h2 id="stories" class="mb-4">Story <span id="crud">CRUD</span> Operations</h2>
+
+    <!-- Create Form -->
+    <form id="createForm">
+        <div class="form-group">
+            <label class="title" for="createTitle">Title:</label>
+            <input type="text" class="form-control" id="createTitle" required="true" style="border: 2px solid #762ddd; box-shadow: none;" placeholder="New Story">
+        </div>
+        <div class="form-group">
+            <label class="title" for="createContent">Content:</label>
+            <textarea class="form-control" id="createContent" rows="3"  style="resize: none; border: 2px solid #762ddd; box-shadow: none; " required placeholder="New Story Content"></textarea>
+        </div>
+        <button id="createBtn" type="submit" class="btn btn-primary" style="background-color: #762ddd; border: none;">Create</button>
+        <button id="clearBtn" type="submit" class="btn btn-primary" style="display: none; background-color: black; border: none; " >Clear</button>
+    </form>
+
+    <hr>
+
+    <!-- Display Stories -->
+    <div id="storiesList"></div>
+
+</div>
+
+
+<!-- Include jQuery and Bootstrap JS -->
+
+
+</body>
+</html>
