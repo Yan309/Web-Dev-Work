@@ -1,0 +1,39 @@
+
+<body style="margin-top: 10%;">
+
+
+<form  class="centerform" action="/addsongs" method="POST">
+    <div id="addbox">
+        <h2 id="contact-us" >Add Songs</h2>
+    <label for="title" class="lbl">Title:</label>
+    <input class="form-control purple-border" type="text" id="title" name="title" value="" required> <br>
+    
+    <label for="singer" class="lbl">Singer:</label>
+    <input class="form-control purple-border" type="text" id="singer" name="singer" value="" required> <br>
+    
+    <label for="album" class="lbl">Album:</label>
+    <input class="form-control purple-border"type="text" id="album" name="album" value="Unknown"> <br>
+    
+    <label  for="genre" class="lbl">Genre:</label>
+    <input class="form-control purple-border" type="text" id="genre" name="genre" value="" oninput="this.value = this.value.toLowerCase()" required> <br>
+    
+    <label for="releaseDate" class="lbl">Release Date:</label>
+    <input class="form-control purple-border" type="date" id="releaseDate" name="releaseDate" value="" required> <br>
+    
+    <label for="lyrics" class="lbl">Lyrics:</label>
+    <textarea class="form-control purple-border" id="lyrics" name="lyrics" rows="5" cols="30" required></textarea> <br>
+    
+    <label for="cover" class="lbl">Cover URL:</label>
+    <input class="form-control purple-border" type="text" id="cover" name="cover" value="" required> <br>
+    
+    <label for="cover" class="lbl">YT_link:</label>
+    <input class="form-control purple-border" type="text" id="ytlink" name="ytlink" value=""> <br>
+    
+    <div class="wrap">
+        <button  type="submit" class="button">ADD</button>
+      </div>
+</div>
+</form>
+
+    
+    

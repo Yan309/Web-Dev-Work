@@ -1,0 +1,20 @@
+<div  id="PageBody">
+      releases
+    </div>
+   <div class="card-container">
+    <% if (latestSongs.length > 0) { %>
+      <% latestSongs.forEach(song => { %>
+        <div class="card">
+          <a href="/songs/<%= song._id %>/lyrics">
+          <img src="<%= song.cover %>" alt="Album Cover">
+          <div class="card-info">
+            <h3><%= song.title %></h3>
+            <p><%= song.singer %></p>
+          </div>
+        </a>
+        </div>
+      <% }); %>
+    <% } else { %>
+      <p>No songs available</p>
+    <% } %>
+  </div>
