@@ -16,6 +16,8 @@ mongoose.connect("mongodb://localhost:27017/LeRix").then(() => {
     console.log("DB Connected");
 });
 
+// server.use(require("./routes/api/songs.js"));
+// will show on postman that its working
 
 server.use(require("./middlewares/siteMiddleware"));
 const router = require("./routes/site/songs.js");
