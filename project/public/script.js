@@ -1,7 +1,7 @@
 $(document).ready(function() {
     $(window).scroll(function() {
         var scrollPos = $(window).scrollTop();
-        var threshold = 100; // Change this value to the scroll extent you want
+        var threshold = 100; 
 
         if (scrollPos > threshold) {
             $('#navbar').addClass('nav-scroll');

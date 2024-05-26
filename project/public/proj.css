@@ -2,6 +2,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Della+Respira&family=Song+Myung&family=Sriracha&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Della+Respira&family=Kalam:wght@300;400;700&family=Pacifico&family=Song+Myung&family=Sriracha&display=swap');
 
+
+.fullscreen{
+    height: 100vh;
+    width: 100%;
+
+}
+
 #navbar {
     height: 128px ;
     padding: 0% ;
@@ -68,9 +75,8 @@
     margin-left: 520px;
 }
 .nav-links {
-    margin-left: 110px;
+    margin-left: 95px;
     display: flex;
-    height: 100%;
   }
   
   .nav-links a {
@@ -95,6 +101,17 @@
     margin-left: 9px;
     margin-right:8px;
   }
+
+  .icon-hover{
+    height: 25px;
+    margin-left: 9px;
+    margin-right:8px;
+  }
+
+ .icon-hover:hover svg {
+  fill: #762ddd !important;
+}
+
   .social-links {
     display: flex;
   }
@@ -125,6 +142,8 @@
   #logo a span:hover{
     color: black;
   }
+  
+  
 
   #le{
     color: black !important;
@@ -171,6 +190,10 @@
   transform:scale(1.05);
 }
 
+.card a{
+  text-decoration: none !important
+}
+
 .card img {
     width: 100%; 
     height: auto;
@@ -206,8 +229,8 @@ footer {
   color: #fff; 
   padding: 20px 40px; 
   position: relative  ;
+  bottom:0 !important;
   width: 100%;
-  margin-top: 6%;
   height: 30% !important;
   overflow: hidden;
 }
@@ -289,7 +312,7 @@ font-style: normal;
 .lbl{
   font-family: Arial, Helvetica, sans-serif;
   font-size: 17px;
-  padding-bottom: 3px;
+  padding-bottom: 1px;
 }
 
 .inputs{
@@ -306,7 +329,7 @@ font-style: normal;
   margin-top: 24px;
 }
 
-.button {
+.wrap button{
   min-width: 170px;
   min-height: 30px;
   font-family: 'Nunito', sans-serif;
@@ -325,7 +348,7 @@ font-style: normal;
   padding: 10px;
   }
 
-button::before {
+.wrap button::before {
 content: '';
   border-radius: 1000px;
   min-width: calc(170px + 20px);
@@ -340,17 +363,17 @@ content: '';
   transition: all .3s ease-in-out 0s;
 }
 
-.button:hover, .button:focus {
+.wrap button:hover, .button:focus {
   color: #ffffff;
   transform: translateY(-6px);
 }
 
-button:hover::before, button:focus::before {
+.wrap button:hover::before, button:focus::before {
   opacity: 1;
 }
 
 
-button:hover::after, button:focus::after {
+.wrap button:hover::after, button:focus::after {
   animation: none;
   display: none;
 }
@@ -382,6 +405,398 @@ button:hover::after, button:focus::after {
   border: 1px solid #762ddd;
   border-color: #762ddd !important;
 }
+
+.lyrics-container {
+  margin-top: 5% ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #762ddd;
+  padding: 20px;
+}
+
+.lyrics-card {
+  margin-top: 3%;
+  background: #000000;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 800px;
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+  padding: 20px;
+  padding-top: 0px !important;
+}
+
+.lyrics-card img {
+  margin-top: 5%;
+  max-width: 100%;
+  border: 3px solid white;
+}
+
+.lyrics-info {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.lyrics-info h1 {
+  margin: 0;
+  font-size: 3em;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.lyrics-info h2 {
+  margin: 10px 0;
+  font-size: 1.5em;
+  color: #ffffff;
+  font-weight: bold;
+  
+}
+
+.lyrics-text {
+  padding-top: 15px;
+  font-size: 1.2em;
+  line-height: 1.6;
+  color: #ffffff;
+  white-space: pre-wrap; 
+}
+
+#addbox{
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  border: 3px solid #762ddd;
+  border-radius: 20px;
+  padding: 30px;
+  height: 85rem;
+}
+
+#signbox{
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  border: 3px solid #762ddd;
+  border-radius: 20px;
+  padding: 30px;
+  height: 70rem;
+}
+
+#loginbox{
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  border: 3px solid #762ddd;
+  border-radius: 20px;
+  padding: 30px;
+  height: 45rem;
+}
+
+.song-container {
+  width: 100%;
+  margin-top: 50px;
+  padding: 20px;
+  padding-bottom: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.song-align{
+  width: 70%;
+  justify-self: center;
+}
+
+.songs-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.song-card {
+  background-color: #e4d5d5;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.2s;
+  width: 230px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+   
+}
+
+.song-card a{
+  text-decoration: none !important
+}
+
+.song-card:hover {
+  transform: translateY(-5px);
+}
+.song-title {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #762ddd;
+}
+
+.song-artist, .song-album {
+  font-size: 1em;
+  font-weight: bold;
+  color: #000000;
+}
+
+#page-heading{
+  font-size: 3.7em;
+  color: #000000;
+  font-family: "Song Myung";
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.edit-delete {
+  position: relative;
+  top: 10px;
+  left:40%;
+}
+.edit-delete a {
+  margin-left: 10px;
+  text-decoration: none;
+  color: white !important ;
+  font-size: 1.3em;
+}
+.edit-delete a:hover {
+  color: #762ddd !important;
+}
+.album-info {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+
+}
+.album-info img {
+  height: 80px;
+  margin-right: 10px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+.album-info .album-name {
+  font-size: 1.25em;
+  font-weight: bold;
+  color: #ffffff  ;
+}
+.video-wrapper {
+  position: relative;
+  padding-bottom: 48%;
+  margin-bottom: 20px;
+  height: 0;
+  width: 70%;
+}
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+.pagination-container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.pagination a{
+  text-decoration: none !important;
+  color: #762ddd !important;
+  font-weight: bold !important;
+}
+
+.pagination a:hover{
+  background-color: #000000 !important;
+}
+
+.pagination a.active {
+  font-weight: bold;
+  background-color: #000000;
+}
+
+.alert {
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 5px;
+  text-align: center !important;
+}
+.alert-danger {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  font-weight: bold;
+  text-align: center !important;
+}
+.alert-success {
+  background-color: #762ddd !important;
+  color: #ffffff !important;
+  font-weight: bold;
+  text-align: center !important;
+}
+
+.text-center { 
+  text-align: center; 
+}
+
+.text-link { 
+  color: #762ddd; 
+  text-decoration: none; 
+  font-weight: bold; 
+}
+
+.text-link:hover { 
+  text-decoration: underline;
+ }
+ 
+
+ .dropdown button{
+  background-color: white;
+  color: black;
+  font-size: 1.2em !important;
+  border: none;
+  padding: 0px;
+  cursor: pointer;
+  margin: 0px;
+  margin-top: -7px;
+  text-decoration: none;
+  font-size: 17px;
+  font-family: Arial, Helvetica, sans-serif ;
+  font-weight: bold;
+ }
+
+ .dropdown button:hover{
+  text-decoration: none !important;
+  color: #762ddd !important;
+  background-color: white !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+
+.dropdown button:focus,
+.dropdown button:active,
+.dropdown.show button{
+  text-decoration: none !important;
+  color: #762ddd !important;
+  background-color: white !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.dropdown-menu .dropdown-item:focus,
+.dropdown-menu .dropdown-item:hover,
+.dropdown-menu .dropdown-item:active{
+  background-color: #ffffff !important;
+  color: #762ddd !important;
+  text-decoration: none !important;
+}
+ .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+
+.genre-filter {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  font-family: 'Arial', sans-serif;
+  gap: 56%;
+}
+
+.genre-label {
+  font-size: 16px;
+  font-weight: bold;
+  color: #000000; 
+  margin-right: 10px;
+}
+
+.genre-select {
+  text-align: center;
+  appearance: none;
+  background-color: #fff;
+  border: 2px solid #762ddd; 
+  border-radius: 8px;
+  padding: 3px 3px;
+  font-size: 16px;
+  color: #762ddd;
+  cursor: pointer;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.genre-select:focus {
+  border-color: #762ddd;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+}
+
+
+.genre-select option {
+  background-color: #ffffff;
+  color: #762ddd;
+}
+
+.genre-select option:hover{
+  color: #ffffff;
+}
+
+.search-bar {
+  position: relative;
+}
+
+.form-control {
+  border-radius: 4px;
+  border: 2px solid #762ddd !important;
+  padding: 5px;
+  font-size: 16px;
+  color: #333;
+}
+
+.search-results {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 1000;
+  font-size: 11px;
+}
+
+.search-results a:hover{
+  text-decoration: none;
+}
+
+
+.search-result-item {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.search-result-item:hover {
+  background-color: #f0f0f0;
+}
+
 
 @media screen and (min-width: 641px) {
   .card {
