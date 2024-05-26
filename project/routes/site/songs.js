@@ -60,7 +60,7 @@ router.post("/addsongs", async (req, res) => {
         ytlink = ytlink.trim();
         let song = await Song.create({ title, singer, album, genre, releaseDate, lyrics, cover, ytlink });
         
-      res.redirect("/");
+      return res.redirect("/");
     } catch (err) {
         console.log(err);
         res.status(500).send("An error occurred while adding the song.");

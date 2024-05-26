@@ -10,9 +10,9 @@ router.use(express.urlencoded({ extended: true }));
 
 router.get("/register", (req, res) => {
   if(req.session.user){
-    res.redirect("/");
+   return res.redirect("/");
   }
-  res.render("auth/signup");
+  return res.render("auth/signup");
 });
 
 router.post("/register", async (req, res) => {
@@ -34,22 +34,19 @@ router.post("/register", async (req, res) => {
   const role = "user";
   let registered = await User.create({ name, email, password, role });
   res.flash("success", "User registered successfully");
-  res.redirect("/login");
+  return res.redirect("/login");
 });
 
 
 router.get("/logout", (req, res) => {
   req.session.user = null;
-  res.redirect("/");
+ return  res.redirect("/");
 });
 
 
 
 router.get("/login", (req, res) => {
-  if(req.session.user){
-    res.redirect("/");
-  }
-  res.render("auth/login");
+  return res.render("auth/login");
 });
 
 
