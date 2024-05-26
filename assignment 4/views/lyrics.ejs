@@ -1,0 +1,23 @@
+<div class="lyrics-container">
+        <div class="lyrics-card">
+            <% if (user && user.role === 'admin') { %>
+                <div class="edit-delete">
+                  <a href="/songs/<%= song._id %>/edit">Edit</a>
+                  <a href="/songs/<%= song._id %>/delete">Delete</a>
+                </div>
+              <% } %>
+              <div class="album-info">
+                <img src="<%= song.cover %>" alt="<%= song.title %> Album Cover">
+                <div class="album-name"><%= song.album %></div>
+              </div>
+            <div class="lyrics-info">
+                  <div class="video-wrapper">
+                    <iframe id="youtubeVideo" src="https://www.youtube.com/embed/<%= song.ytlink %>?autoplay=0" frameborder="0" allowfullscreen></iframe>
+                  </div>
+                <h1><%= song.title %></h1>
+                <h2><%= song.singer %></h2>
+                <p class="lyrics-text"><%= song.lyrics %></p>
+            </div>
+        </div>
+</div>
+

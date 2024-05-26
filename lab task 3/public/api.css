@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Della+Respira&family=Song+Myung&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Della+Respira&family=Song+Myung&family=Sriracha&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Della+Respira&family=Kalam:wght@300;400;700&family=Pacifico&family=Song+Myung&family=Sriracha&display=swap');
+
+#navbar {
+    height: 128px ;
+    padding: 0% ;
+    display: flex;
+    flex: wrap;
+    top: 0;
+    position: fixed;
+    z-index: 2;
+    background-color: white;
+    width: 100%;
+    transition: all 0.2s ease;
+}
+
+.nav-scroll{
+  height: 100px !important;
+  transition: all 0.2s ease;
+}
+
+#navbar-control{
+    padding: 0% !important;
+    
+}
+
+.navbar-brand{
+    width: 9% !important;
+    margin-right: 0% !important;
+}
+
+.nav-item{
+    width: 20% !important;
+    justify-content: center !important;
+}
+
+.navbar-nav{
+    margin: 0% !important;
+    width: 100% !important;
+}
+
+.navbar-nav-centered {
+    display: flex !important;
+    justify-content: center !important;
+    width: 100% !important;
+    height: 0% !important;
+}
+
+#logo{
+    width: 50% !important;
+    height: 100%;
+}
+.height{
+  height: 100%;
+}
+
+#social_pages{
+    padding-top: 30px;
+    width: 50% !important;
+  align-items: center;
+  margin-left: auto;
+  height: 100%;
+}
+#socials{
+    width: 50%;
+    padding-bottom: 20px;
+    margin-left: 520px;
+}
+.nav-links {
+    margin-left: 110px;
+    display: flex;
+    height: 100%;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #000000;
+    margin: 0 10px;
+    font-size: 17px;
+    display: flex;
+    margin-right:80px;
+    font-family: Arial, Helvetica, sans-serif ;
+    font-weight: bold;
+    height: 100%;
+  }
+  
+  .nav-links a:hover {
+    text-decoration: none;
+    color: #762ddd;
+  }
+
+  .social-links a img {
+    height: 18px;
+    margin-left: 9px;
+    margin-right:8px;
+  }
+  .social-links {
+    display: flex;
+  }
+  
+  #logo a {
+    display: flex; 
+    align-items: center; 
+    text-decoration: none; 
+    height:100%;
+  }
+  #logo a img{
+    height: 95%;
+    margin-top: 7px;
+    vertical-align: middle;
+    margin-left: 45px;
+  }
+
+  #logo a span {
+    font-family:fantasy;
+    font-size: 50px;
+    text-decoration: none;
+    margin-top: 27px;
+    color: #762ddd;
+  }
+  #logo a span:active {
+    color: #762ddd;
+  }
+  #logo a span:hover{
+    color: black;
+  }
+
+  #le{
+    color: black !important;
+  }
+  #le:hover{
+    color: #762ddd !important;
+  }
+
+  #page-parent{
+    position: relative;
+    height: 100vh;
+}
+
+.container{
+    margin-top:180px !important;
+    display: flex !important;
+    flex-direction: column;
+}
+
+#stories{
+    align-self: center;
+    font-family: fantasy;
+    font-size: 40px;
+    color: #000000;
+}
+
+.title{
+    align-self: center;
+    font-family: "Song Myung";
+    font-size: 20px;
+    color: #000000;
+    font-weight: bold;
+}
+
+#crud{
+    font-family: fantasy;
+    color: #762ddd;
+}
+.story-container{
+    display: flex;
+}
+.storytitle{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    font-weight:bold;
+}
+.story{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.editbutton{
+    background-color:#762ddd;
+    font-family: Arial, Helvetica, sans-serif;
+    border: none;
+}
+.deletebutton{
+    background-color:#000000;
+    font-family: Arial, Helvetica, sans-serif;
+    border: none;
+}
+.editbutton:hover{
+    background-color:#762ddd;
+    border: none;
+}
+.deletebutton:hover{
+    background-color:#000000;
+    border: none;
+}
+.editbutton:active{
+    background-color:#762ddd !important;
+    border: none !important;
+}
+.deletebutton:active{
+    background-color:#000000 !important;
+    border: none !important;
+}
+

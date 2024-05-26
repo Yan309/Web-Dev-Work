@@ -1,0 +1,34 @@
+<body style="margin-top: 10%;">
+    <form class="centerform" action="/songs/<%= song._id %>/edit" method="POST">
+      <div id="addbox">
+        <h2 id="contact-us">Edit Song</h2>
+        <label for="title" class="lbl">Title:</label>
+        <input class="form-control purple-border" type="text" id="title" name="title" value="<%= song.title %>" required> <br>
+  
+        <label for="singer" class="lbl">Singer:</label>
+        <input class="form-control purple-border" type="text" id="singer" name="singer" value="<%= song.singer %>" required> <br>
+  
+        <label for="album" class="lbl">Album:</label>
+        <input class="form-control purple-border" type="text" id="album" name="album" value="<%= song && song.album ? song.album : 'Unknown' %>"> <br>
+  
+        <label for="genre" class="lbl">Genre:</label>
+        <input class="form-control purple-border" type="text" id="genre" name="genre" value="<%= song.genre %>"  required> <br>
+  
+        <label for="releaseDate" class="lbl">Release Date:</label>
+        <input class="form-control purple-border" type="date" id="releaseDate" name="releaseDate" value="<%= song.releaseDate.toISOString().split('T')[0] %>" required> <br>
+  
+        <label for="lyrics" class="lbl">Lyrics:</label>
+        <textarea class="form-control purple-border" id="lyrics" name="lyrics" rows="5" cols="30" required><%= song.lyrics %></textarea> <br>
+  
+        <label for="cover" class="lbl">Cover URL:</label>
+        <input class="form-control purple-border" type="text" id="cover" name="cover" value="<%= song.cover %>" required> <br>
+        
+        <label for="cover" class="lbl">YT_link:</label>
+        <input class="form-control purple-border" type="text" id="ytlink" name="ytlink" value="<%= song.ytlink %>" required> <br>
+        
+        <div class="wrap">
+          <button type="submit" class="button">Update</button>
+        </div>
+      </div>
+    </form>
+  </body>
