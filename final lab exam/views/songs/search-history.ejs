@@ -1,0 +1,15 @@
+<div  class="container history-container fullscreen" style="margin-top: 10%;">
+    <h1>Search History</h1>
+    <ul class="list-group">
+      <% if (searchHistory.length === 0) { %>
+        <li class="list-group-item">No search history available.</li>
+      <% } else { %>
+        <% searchHistory.forEach((search, index) => { %>
+          <li class="list-group-item history-item"><%= index + 1 %>. <%= search %></li>
+        <% }) %>
+      <% } %>
+        </ul>
+        </div>
+        
+        
+    

@@ -148,4 +148,20 @@ router.get("/songs", async (req, res) => {
   }
 });
 
+router.post('/search', (req, res) => {
+  const { searchQuery } = req.body;
+  if (!req.session.searchHistory) {
+    req.session.searchHistory = [];
+  }
+  req.session.searchHistory.push(searchQuery);
+  const searchHistory = req.session.searchHistory || [];
+  res.render('./songs/search-history', { searchHistory });
+});
+
+router.get('/search-history', (req, res) => {
+  const searchHistory = req.session.searchHistory || [];
+  res.render('./songs/search-history', { searchHistory });
+});
+
+
 module.exports = router;

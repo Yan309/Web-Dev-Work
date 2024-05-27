@@ -1,117 +1,118 @@
-
 <div class="fullscreen" style="margin-top: 5.5%;">
   <div class="song-container">
     <div class="song-align">
-    <h1 id="page-heading">All Songs</h1>
-    <div class="genre-filter">
-      <div>
-      <label for="genre" class="genre-label">Filter by Genre:</label>
-      <select id="genre" name="genre" onchange="filterSongsByGenre()" class="genre-select">
-        <option value="">All</option>
-        <% genres.forEach(genre => { %>
-          <option value="<%= genre %>" <%= selectedGenre === genre ? 'selected' : '' %>><%= genre %></option>
-        <% }); %>
-      </select>
-    </div>
-      <div class="search-bar">
-        <input type="text" id="searchInput" class="form-control" placeholder="Search songs...">
-        <div id="searchResults" class="search-results"></div>
-      </div>
-    </div>
-    <div class="songs-grid">
-      <% songs.forEach(song => { %>
-        <div class="song-card" style="background-image: url('http://localhost:3000/images/bgimg.webp');">
-          <img src="">
-            <a href="/songs/<%= song._id %>/lyrics">
-          <div class="song-title"><%= song.title %></div>
-          <div class="song-artist">Artist: <%= song.singer %></div>
-          <% if (song.album) { %>
-            <div class="song-album">Album: <%= song.album %></div>
-          <% } %>
-        </a>
+      <h1 id="page-heading">All Songs</h1>
+      <div class="genre-filter">
+        <div>
+          <label for="genre" class="genre-label">Filter by Genre:</label>
+          <select id="genre" name="genre" onchange="filterSongsByGenre()" class="genre-select">
+            <option value="">All</option>
+            <% genres.forEach(genre => { %>
+              <option value="<%= genre %>" <%= selectedGenre === genre ? 'selected' : '' %>><%= genre %></option>
+            <% }); %>
+          </select>
         </div>
-      <% }); %>
-    </div>
-    <div class="pagination-container">
-      <ul class="pagination">
-        <% if (page > 1) { %>
-          <li>
-            <a href="/songs?page=1&genre=<%= selectedGenre %>">First</a>
-          </li>
-          <li>
-            <a href="/songs?page=<%= page - 1 %>&genre=<%= selectedGenre %>">&laquo; Prev</a>
-          </li>
-        <% } %>
-        <% if (totalPages <= 7) { %>
-          <% for(let index = 1; index <= totalPages; index++) { %>
+        <div class="search-bar">
+          <form id="searchForm" action="/search" method="POST">
+            <input type="text" id="searchInput" name="searchQuery" class="form-control" placeholder="Search songs...">
+            <button type="submit" id="searchButton" class="btn btn-primary">Search</button>
+          </form>
+
+          <div id="searchResults" class="search-results"></div>
+        </div>
+      </div>
+      <div class="songs-grid">
+        <% songs.forEach(song => { %>
+          <div class="song-card" style="background-image: url('http://localhost:3000/images/bgimg.webp');">
+            <img src="">
+            <a href="/songs/<%= song._id %>/lyrics">
+              <div class="song-title"><%= song.title %></div>
+              <div class="song-artist">Artist: <%= song.singer %></div>
+              <% if (song.album) { %>
+                <div class="song-album">Album: <%= song.album %></div>
+              <% } %>
+            </a>
+          </div>
+        <% }); %>
+      </div>
+      <div class="pagination-container">
+        <ul class="pagination">
+          <% if (page > 1) { %>
             <li>
-              <a href="/songs?page=<%= index %>&genre=<%= selectedGenre %>" class="<%= page === index ? 'active' : '' %>"><%= index %></a>
+              <a href="/songs?page=1&genre=<%= selectedGenre %>">First</a>
+            </li>
+            <li>
+              <a href="/songs?page=<%= page - 1 %>&genre=<%= selectedGenre %>">&laquo; Prev</a>
             </li>
           <% } %>
-        <% } else { %>
-          <% if (page <= 4) { %>
-            <% for(let index = 1; index <= 5; index++) { %>
+          <% if (totalPages <= 7) { %>
+            <% for(let index = 1; index <= totalPages; index++) { %>
               <li>
                 <a href="/songs?page=<%= index %>&genre=<%= selectedGenre %>" class="<%= page === index ? 'active' : '' %>"><%= index %></a>
-              </li>
-            <% } %>
-            <li>...</li>
-            <li>
-              <a href="/songs?page=<%= totalPages %>&genre=<%= selectedGenre %>"><%= totalPages %></a>
             </li>
-          <% } else if (page > totalPages - 4) { %>
-            <li>
-              <a href="/songs?page=1&genre=<%= selectedGenre %>">1</a>
-            </li>
-            <li>...</li>
-            <% for(let index = totalPages - 4; index <= totalPages; index++) { %>
-              <li>
-                <a href="/songs?page=<%= index %>&genre=<%= selectedGenre %>" class="<%= page === index ? 'active' : '' %>"><%= index %></a>
-              </li>
             <% } %>
           <% } else { %>
-            <li>
-              <a href="/songs?page=1&genre=<%= selectedGenre %>">1</a>
-            </li>
-            <li>...</li>
-            <% for(let index = page - 1; index <= page + 1; index++) { %>
+            <% if (page <= 4) { %>
+              <% for(let index = 1; index <= 5; index++) { %>
+                <li>
+                  <a href="/songs?page=<%= index %>&genre=<%= selectedGenre %>" class="<%= page === index ? 'active' : '' %>"><%= index %></a>
+                </li>
+              <% } %>
+              <li>...</li>
               <li>
-                <a href="/songs?page=<%= index %>&genre=<%= selectedGenre %>" class="<%= page === index ? 'active' : '' %>"><%= index %></a>
+                <a href="/songs?page=<%= totalPages %>&genre=<%= selectedGenre %>"><%= totalPages %></a>
+              </li>
+            <% } else if (page > totalPages - 4) { %>
+              <li>
+                <a href="/songs?page=1&genre=<%= selectedGenre %>">1</a>
+              </li>
+              <li>...</li>
+              <% for(let index = totalPages - 4; index <= totalPages; index++) { %>
+                <li>
+                  <a href="/songs?page=<%= index %>&genre=<%= selectedGenre %>" class="<%= page === index ? 'active' : '' %>"><%= index %></a>
+                </li>
+              <% } %>
+            <% } else { %>
+              <li>
+                <a href="/songs?page=1&genre=<%= selectedGenre %>">1</a>
+              </li>
+              <li>...</li>
+              <% for(let index = page - 1; index <= page + 1; index++) { %>
+                <li>
+                  <a href="/songs?page=<%= index %>&genre=<%= selectedGenre %>" class="<%= page === index ? 'active' : '' %>"><%= index %></a>
+                </li>
+              <% } %>
+              <li>...</li>
+              <li>
+                <a href="/songs?page=<%= totalPages %>&genre=<%= selectedGenre %>"><%= totalPages %></a>
               </li>
             <% } %>
-            <li>...</li>
+          <% } %>
+          <% if (page < totalPages) { %>
             <li>
-              <a href="/songs?page=<%= totalPages %>&genre=<%= selectedGenre %>"><%= totalPages %></a>
+              <a href="/songs?page=<%= page + 1 %>&genre=<%= selectedGenre %>">Next &raquo;</a>
+            </li>
+            <li>
+              <a href="/songs?page=<%= totalPages %>&genre=<%= selectedGenre %>">Last</a>
             </li>
           <% } %>
-        <% } %>
-        <% if (page < totalPages) { %>
-          <li>
-            <a href="/songs?page=<%= page + 1 %>&genre=<%= selectedGenre %>">Next &raquo;</a>
-          </li>
-          <li>
-            <a href="/songs?page=<%= totalPages %>&genre=<%= selectedGenre %>">Last</a>
-          </li>
-        <% } %>
-      </ul>
-    </div> 
-  </div>
+        </ul>
+      </div> 
+    </div>
   </div>
   <script>
-  function filterSongsByGenre() {
-    var genre = document.getElementById('genre').value;
-    window.location.href = '/songs?genre=' + genre;
-  }
-  function filterSongsByGenre() {
+    function filterSongsByGenre() {
       var genre = document.getElementById('genre').value;
       window.location.href = '/songs?genre=' + genre;
     }
 
     document.addEventListener('DOMContentLoaded', function() {
       const searchInput = document.getElementById('searchInput');
+      const searchButton = document.getElementById('searchButton');
       const searchResults = document.getElementById('searchResults');
 
-      searchInput.addEventListener('input', function() {
+      searchButton.addEventListener('click', function(e) {
+        e.preventDefault(); 
         const query = searchInput.value.trim();
         if (query.length > 0) {
           fetch(`/search?query=${encodeURIComponent(query)}`)
@@ -124,10 +125,12 @@
                 item.innerHTML = `
                   <a href="/songs/${song._id}/lyrics">
                     <div style="margin-bottom:0" class="song-title">${song.title}</div>
-                    <div  class="song-artist">Artist: ${song.singer}</div>
+                    <div class="song-artist">Artist: ${song.singer}</div>
                   </a>
                 `;
                 searchResults.appendChild(item);
+                document.getElementById('searchForm').submit(); 
+                
               });
             })
             .catch(error => {
@@ -138,5 +141,5 @@
         }
       });
     });
-</script>
+  </script>
 </div>
